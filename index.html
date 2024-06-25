@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body onload="showQuestions(0)">
+    
+<div class="quizContainer">
+    
+    <div class="heading">
+        <h1 id="Qheading"></h1>
+        <p id="timer"><i class="bi bi-clock"></i></p>
+    </div>
+
+    <div class="QnAdiv">
+       <h2 id="question"></h2>
+       <label for="a" id="optionText" class="opt1"><input id="a" type="radio" name="radio" value=".">.</label>
+       <label for="b" id="optionText" class="opt2"><input id="b" type="radio" name="radio" value=".">.</label>
+       <label for="c" id="optionText" class="opt3"><input id="c" type="radio" name="radio" value=".">.</label>
+       <label for="d" id="optionText" class="opt4"><input id="d" type="radio" name="radio" value=".">.</label>
+    
+          <div class="nextbtndiv">
+             <button id="nextbtn">Next <i class="bi bi-arrow-right-short"></i></button>
+          </div>
+
+   </div>
+
+</div>
+<!-- <h4 id="copyright">CopyRight &#169; 2024 By Muhammad Hassan Raza</h4> -->
+
+    <script src="script.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>   
+</body>
+</html>
