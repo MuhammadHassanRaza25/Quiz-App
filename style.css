@@ -1,10 +1,7 @@
 body{
     font-family:sans-serif;
-    height: 97vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
     background-image: url(images/bgimg.jpg);
     background-size: cover;
 }
@@ -17,8 +14,8 @@ body{
     border-radius: 10px;
     box-shadow: 0px 0px 5px black;
     height: 85vh;
-    width: 55%;
-    margin-top: 1.06%;
+    width: 58%;
+    margin-top: 2%;
 }
 .heading{
     display: flex;
@@ -48,7 +45,7 @@ body{
     margin-left: 1%;
     margin-top: 3.5%;
     margin-bottom: 5%;
-    font-size: 22px;
+    font-size: 20.5px;
 }
 #optionText{
     display: flex;
@@ -72,18 +69,38 @@ input{
    border: 1px solid gray;
 }
 /* buttons styling start */
+.btnParent{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 3%;
+}
+/* Restart button start */
+.rtbtndiv button{
+    margin-top: 2%;
+    background-color: green;
+    color: white;
+    padding: 12px;
+    width: 240px;
+    border: none;
+    border-radius: 8px;
+    font-size: larger;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.rtbtndiv button:hover{
+    background-color: rgb(0, 197, 0);
+    transition: all 0.3s;
+}
+/* Restart button end */
 
 /* Next button start */
-.nextbtndiv{
-    text-align:end;
-    margin-right: 1%;
-}
 .nextbtndiv button{
     margin-top: 2%;
     background-color: green;
     color: white;
     padding: 12px;
-    width: 110px;
+    width: 240px;
     border: none;
     border-radius: 8px;
     font-size: larger;

@@ -128,6 +128,13 @@ function showQuestions(e) {
     }
 }
 
+// restart button start
+var rtbtn = document.getElementById('rtbtn')
+rtbtn.addEventListener('click',()=>{
+  location.reload()
+})
+// restart button end
+
 // next button start
 var questionCount = 0
 var Qheading = document.getElementById('Qheading')
@@ -139,7 +146,6 @@ nextbtn.addEventListener('click',()=>{
       var checkVal = radio[i].value
     }
  }
-
  for (let i = 0; i < quizApp.length; i++) {
   if(checkVal == quizApp[i].correct){
   score += 10
@@ -149,14 +155,46 @@ nextbtn.addEventListener('click',()=>{
 }
 
    questionCount++
+
+   // next button to convert submit 
+   if(questionCount == quizApp.length){
+     nextbtn.innerText = 'Submit Quiz'
+     
+     // yahan pe nextbtn means submit button h.
+     nextbtn.addEventListener('click',()=>{
+      Qheading.innerHTML = ''
+      timer.innerHTML = `<i class="bi bi-clock"></i> ${'00'}:${'00'}`
+      clearInterval(seconds)
+
+      if(score >= 50){
+          Swal.fire({
+            title: "Congratulations, you passed",
+            text: `Your Score ${score}/${100}`,
+            icon: "success"
+          });
+        }
+        else if(score < 50){
+          Swal.fire({
+            title: "You Failed",
+            text: `Your Score ${score}/${100}`,
+            icon: "error"
+          });
+        }
+     })
+   }
+   else{
+     nextbtn.innerText = `Next`
+   }
+
+   // ye har next main value refresh kardega
    for (let i = 0; i < radio.length; i++) {
      radio[i].checked = false
    }
+
    Qheading.innerHTML = `Question ${questionCount} of ${quizApp.length}`
    showQuestions(questionCount)
 })
 // next button end
-
 
 // Timer Start
 var timer = document.getElementById('timer')
@@ -191,16 +229,3 @@ seconds = setInterval(() => {
   timer.innerHTML = `<i class="bi bi-clock"></i> ${min}:${sec}`
 }, 1000);
 // Timer End
-
-// Result
-// if(score > 50){
-//   Swal.fire({
-//     title: "Good job!",
-//     text: "Congratulations, you passed",
-//     text: `Your Score ${score}`,
-//     icon: "success"
-//   });
-// }
-// else if(score < 50){
-// alert('sd')
-// }
