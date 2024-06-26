@@ -125,4 +125,27 @@ input{
         height: 80vh;
     }
 }
+@media(max-width:430px){
+    .quizContainer{
+        margin-top: 12%;
+    }
+    #question{
+        margin-left: 1%;
+        margin-top: 7%;
+        margin-bottom: 6%;
+        font-size: 18px;
+    }
+    #optionText{
+        font-size:16px;
+        padding: 12px;
+        margin-bottom: 4%;
+    }
+    .btnParent{
+        margin-top: 12%;
+    }
+    .btnParent button{
+        width: 140px;
+        font-size: 17px;
+    }
+}
 /* responsiveness end */
