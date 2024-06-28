@@ -140,7 +140,7 @@ var questionCount = 0
 var Qheading = document.getElementById('Qheading')
 
 nextbtn.addEventListener('click',()=>{
-
+  // checking correct value start
   for (let i = 0; i < radio.length; i++) {
     if(radio[i].checked){
       var checkVal = radio[i].value
@@ -153,14 +153,15 @@ nextbtn.addEventListener('click',()=>{
   break
 }
 }
+// checking correct value end
 
-   questionCount++
+  questionCount++ 
 
    // next button to convert submit 
    if(questionCount == quizApp.length){
      nextbtn.innerText = 'Submit Quiz'
      
-     // yahan pe nextbtn means submit button h.
+     //Result: yahan pe nextbtn means submit button h.
      nextbtn.addEventListener('click',()=>{
       Qheading.innerHTML = ''
       timer.innerHTML = `<i class="bi bi-clock"></i> ${'00'}:${'00'}`
@@ -190,7 +191,7 @@ nextbtn.addEventListener('click',()=>{
    for (let i = 0; i < radio.length; i++) {
      radio[i].checked = false
    }
-
+   
    Qheading.innerHTML = `Question ${questionCount} of ${quizApp.length}`
    showQuestions(questionCount)
 })

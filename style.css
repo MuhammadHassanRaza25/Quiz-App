@@ -127,7 +127,7 @@ input{
 }
 @media(max-width:430px){
     .quizContainer{
-        margin-top: 12%;
+        margin-top: 10%;
     }
     #question{
         margin-left: 1%;
