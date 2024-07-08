@@ -160,7 +160,12 @@ nextbtn.addEventListener('click',()=>{
    // next button to convert submit 
    if(questionCount == quizApp.length){
      nextbtn.innerText = 'Submit Quiz'
-     
+     question.innerText = 'Quiz has been completed Submit your quiz'
+     opt1.childNodes[1].nodeValue = '...'
+     opt2.childNodes[1].nodeValue = '...'
+     opt3.childNodes[1].nodeValue = '...'
+     opt4.childNodes[1].nodeValue = '...'
+
      //Result: yahan pe nextbtn means submit button h.
      nextbtn.addEventListener('click',()=>{
       Qheading.innerHTML = ''
