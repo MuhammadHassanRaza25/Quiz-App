@@ -2,8 +2,10 @@ body{
     font-family:sans-serif;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-image: url(images/bgimg.jpg);
     background-size: cover;
+    height: 97vh;
 }
 .quizContainer{
     display: flex;
@@ -15,7 +17,6 @@ body{
     box-shadow: 0px 0px 5px black;
     height: 85vh;
     width: 58%;
-    margin-top: 2%;
 }
 .heading{
     display: flex;
@@ -85,6 +86,7 @@ input{
     border: none;
     border-radius: 8px;
     font-size: larger;
+    font-weight: bold;
     cursor: pointer;
     transition: all 0.3s;
 }
@@ -104,6 +106,7 @@ input{
     border: none;
     border-radius: 8px;
     font-size: larger;
+    font-weight: bold;
     cursor: pointer;
     transition: all 0.3s;
 }
@@ -121,13 +124,24 @@ input{
 /* responsiveness start */
 @media(max-width:1024px){
     .quizContainer{
-        width: 90%;
+        width: 80%;
+    }
+}
+@media(max-width:700px){
+    .quizContainer{
         height: 80vh;
+    }
+    .btnParent{
+        margin-top: 12%;
+    }
+    .btnParent button{
+        width: 150px;
+        font-size: 17px;
     }
 }
 @media(max-width:430px){
-    .quizContainer{
-        margin-top: 10%;
+    #Qheading{
+        font-size: 20px;
     }
     #question{
         margin-left: 1%;
@@ -136,16 +150,17 @@ input{
         font-size: 18px;
     }
     #optionText{
-        font-size:16px;
+        font-size:13px;
         padding: 12px;
         margin-bottom: 4%;
     }
     .btnParent{
-        margin-top: 12%;
+        margin-top: 15%;
     }
     .btnParent button{
-        width: 140px;
-        font-size: 17px;
+        width: 120px;
+        font-size: 15px;
+        font-weight: bold;
     }
 }
 /* responsiveness end */
